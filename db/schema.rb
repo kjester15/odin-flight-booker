@@ -25,8 +25,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_014440) do
     t.integer "duration", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "departure_id"
-    t.bigint "arrival_id"
+    t.bigint "departure_id", null: false
+    t.bigint "arrival_id", null: false
     t.index ["arrival_id"], name: "index_flights_on_arrival_id"
     t.index ["departure_id"], name: "index_flights_on_departure_id"
   end
