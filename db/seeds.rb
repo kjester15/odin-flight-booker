@@ -11,4 +11,3 @@
 %w[PDX BOS JFK LAS DEN SAN ORD DWF].each do |airport_code|
   Airport.create!(code: airport_code)
 end
-# Airport.create!([{code: "PDX"}, {code: "BOS"}, {code: "JFK"}, {code: "LAS"}, {code: "DEN"}, {code: "SAN"}, {code: "ORD"}, {code: "DFW"}])
