@@ -1,5 +1,4 @@
 class Flight < ApplicationRecord
-  has_many :airports
-  has_many :departure_airports, through: :departures #source: 
-  has_many :arrival_airports, through: :arrivals #source: 
+  has_many :departure_airports, class_name: "Airport"
+  has_many :arrival_airports, class_name: "Airport"
 end

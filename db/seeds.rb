@@ -8,6 +8,11 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 # Airport.destroy_all
+airports = []
 %w[PDX BOS JFK LAS DEN SAN ORD DWF].each do |airport_code|
-  Airport.create!(code: airport_code)
+  airports << Airport.create(code: airport_code)
+end
+
+100.times do
+  Flight.create([{ date_time: DateTime.now + rand(1..90).days, duration: rand(60..400), departure_id: airports.sample.id, arrival_id: airports.sample.id }])
 end
